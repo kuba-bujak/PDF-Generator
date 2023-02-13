@@ -1,0 +1,238 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family:'Courier New', Courier, monospace;
+	font-size: 16px;
+}
+
+h1 {
+	text-align: center;
+	padding: 1.4em;
+	background-color: #367ebd;
+	color: white;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 1.4rem;
+	font-size: 1.8em;
+	margin-top: 1.4em;
+}
+
+#pdf-form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	gap: 2rem;
+	width: 80%;
+	margin: auto;
+	padding-top: 2rem;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-size: 1.4em;
+}
+
+input, textarea, select {
+	margin-bottom: 1.2rem;
+	padding: 0.8rem;
+	font-size: 1.2em;
+	outline: none;
+	border: none;
+	background-color: rgb(206, 202, 202);
+}
+
+textarea {
+	min-height: 20rem;
+	max-width: 100%;
+}
+
+.style {
+	display: flex;
+	flex-direction: column;
+}
+
+.style .colors {
+	display: flex;
+	flex-direction: column;
+}
+
+input[type="color"] {
+	width: 100%;
+	padding: 0;
+	background-color: white;
+	border: none;
+	outline: none;
+}
+
+input[type=range] {
+	appearance: none;
+	margin: 18px 0;
+	width: 100%;
+ }
+ input[type=range]:focus {
+	outline: none;
+ }
+ input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: #3071a9;
+	border-radius: 1.3px;
+	border: 0.2px solid #010101;
+ }
+ input[type=range]::-webkit-slider-thumb {
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	border: 1px solid #000000;
+	height: 36px;
+	width: 16px;
+	border-radius: 3px;
+	background: #ffffff;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -14px;
+ }
+ input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #367ebd;
+ }
+ input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: #3071a9;
+	border-radius: 1.3px;
+	border: 0.2px solid #010101;
+ }
+ input[type=range]::-moz-range-thumb {
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	border: 1px solid #000000;
+	height: 36px;
+	width: 16px;
+	border-radius: 3px;
+	background: #ffffff;
+	cursor: pointer;
+ }
+ input[type=range]::-ms-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	border-width: 16px 0;
+	color: transparent;
+ }
+ input[type=range]::-ms-fill-lower {
+	background: #2a6495;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+ }
+ input[type=range]::-ms-fill-upper {
+	background: #3071a9;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+ }
+ input[type=range]::-ms-thumb {
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	border: 1px solid #000000;
+	height: 36px;
+	width: 16px;
+	border-radius: 3px;
+	background: #ffffff;
+	cursor: pointer;
+ }
+ input[type=range]:focus::-ms-fill-lower {
+	background: #3071a9;
+ }
+ input[type=range]:focus::-ms-fill-upper {
+	background: #367ebd;
+ }
+
+h3{
+	text-align: center;
+	margin-bottom: 1.4em;
+	margin-top: 1.4em;
+	font-size: 1.6em;
+ }
+
+ input[type="radio"] {
+	margin-left: 1em;
+ }
+
+ .fonts {
+	text-align: center;
+ }
+
+ .zgoda {
+	gap: 0;
+ }
+
+ #create-pdf {
+	margin-top: 1rem;
+	width: 100%;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 1em;
+	font-size: 1.4em;
+	background-color: #367ebd;
+	color: white;
+ }
+
+ #create-pdf:hover {
+	border: 1px solid #367ebd;
+	background-color: white;
+	color: #367ebd;
+ }
+
+ .footer {
+	background-color: #367ebd;
+	width: 100%;
+	color: white;
+	font-weight: normal;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	font-size: 16px;
+}
+
+.footer__content {
+	display: flex;
+	gap: 0.2rem;
+	justify-content: center;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	font-weight: normal;
+}
+
+.footer__content a {
+	color: rgb(156, 156, 156);
+	text-decoration: none;
+}
+
+@media (max-width: 800px) {
+	/*---------- Footer ----------*/
+	.footer__content {
+			flex-direction: column;
+		}
+}
+ 
+
+
+
+
+

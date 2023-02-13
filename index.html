@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>Generator PDF</h1>
+
+	<form id="pdf-form">
+
+		<div class="content">
+
+			<h2>Informacje</h2>
+
+			<label for="title">Tytul dokumentu</label>
+			<input type="text" name="title" placeholder="Generator PDF" id="name">
+	
+			<label for="author">Autor</label>
+			<input type="text" name="author" placeholder="Jan Kowalski" id="author">
+	
+			<label for="email">Email</label>
+			<input type="email" name="email" placeholder="jan.kowalski@gmail.com" id="email" >
+	
+			<label for="phone">Telefon</label>
+			<input type="text" name="phone" placeholder="111 222 333" id="phone">
+
+			<label for="date">Data</label>
+			<input type="date" name="date" id="date">
+
+			<label for="image">Zdjęcie</label>
+			<input type="file" name="image" accept="image/*" id="image">
+
+			<label for="message">Tekst</label>
+			<textarea name="message" placeholder="Zawartość dokumentu" id="message"></textarea>
+
+		</div>
+
+		<div class="style">
+
+			<h2>Wygląd</h2>
+
+			<div class="colors">
+				<label for="header_color">Kolor czcionki tytułu</label>
+				<input type="color" name="header_color" id="header_color" value="#000000">
+			
+				<label for="font_color">Kolor czcionki tekstu</label>
+				<input type="color" name="font_color" id="font_color" value="#000000">
+
+				<label for="opacity">Odstęp między liniami</label>
+				<input type="range" name="opacity" id="opacity" min="0" max="100" value="50">
+			</div>
+
+			<h3>Style czcionek</h3>
+
+			<div class="fonts">
+
+				<input type="radio" name="style_czcionki" id="bold" value="bold">
+				<label for="bold">Bold</label>
+				
+				<input type="radio" name="style_czcionki" id="normal" value="normal" checked>
+				<label for="normal">Normal</label>
+	
+				<input type="radio" name="style_czcionki" id="light" value="light">
+				<label for="light">Light</label>
+
+			</div>		
+
+			<label for="font">Czcionka</label>
+			<select name="font" id="font">
+			  <option value="courier" selected>Courier</option>
+			  <option value="times">Times</option>
+			  <option value="helvetica">Helvetica</option>
+			</select>
+
+			<label for="fontSizeHeader">Wielkość czcionki nagłówka</label>
+			<input type="number" name="fontSizeHeader" id="fontSizeHeader" value="16">
+
+			<label for="fontSize">Wielkość czcionki</label>
+			<input type="number" name="fontSize" id="fontSize" value="12">
+
+			<div class="zgoda">
+				<input type="checkbox" name="zgoda" id="zgoda" required>
+				<label for="zgoda">*Akceptuję regulamin generatora PDF</label><br>
+				<button id="create-pdf">Create PDF</button>
+			</div>
+
+		</div>
+
+	</form>
+
+	<footer class="footer">
+		<h5 class="footer__content">
+			<p>
+				Copyright &#169; 2022 | All rights reserved by <strong><a href="#">Generator PDF</a></strong>. 
+			</p>
+			<p>
+				Projekt strony internetowej wykonany przez: <strong><a href="https://www.linkedin.com/in/jakub-bujak-5a5b60194/" target="_blank">Kuba Bujak</a></strong>.
+			</p>
+		</h5>
+	</footer>
+    
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+<script src="./main.js"></script>
+</html>
